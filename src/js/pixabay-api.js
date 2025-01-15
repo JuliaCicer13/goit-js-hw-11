@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
   
   
 
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://pixabay.com/api/?key={ KEY }&q=yellow+flowers&image_type=photo")
     .then((response) => {
       if (!response.ok) {
         throw new Error(response.status);
