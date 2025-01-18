@@ -1,5 +1,6 @@
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
+
+import iziToast from "./izitoast";
+import "./izitoast/dist/css/iziToast.min.css";
 
 const form = document.createElement('form');
 const input = document.createElement('input');
@@ -46,7 +47,7 @@ form.addEventListener("submit", (event) => {
      
       .then((data) => {
       
-        
+
       // Дані від бекенда
         if (data.hits.length === 0) {
             iziToast.show({
