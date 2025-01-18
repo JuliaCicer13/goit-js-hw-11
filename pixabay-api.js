@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-3cfb730f.js";/* empty css                      */const e="48269071-e04b626909c4b310c40a55ae0",o="cats",t=new URLSearchParams({image_type:"photo",orientation:"horizontal",safesearch:!0});fetch(`https://pixabay.com/api/?key=${e}&q=${o}&${t}`).then(a=>a.json()).then(a=>{console.log(a)}).catch(a=>console.error("Ошибка:",a));
+//# sourceMappingURL=pixabay-api.js.map
