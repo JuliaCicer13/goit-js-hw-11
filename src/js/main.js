@@ -44,7 +44,9 @@ form.addEventListener("submit", (event) => {
          return response.json();
       })
      
-    .then((data) => {
+      .then((data) => {
+      
+        
       // Дані від бекенда
         if (data.hits.length === 0) {
             iziToast.show({
