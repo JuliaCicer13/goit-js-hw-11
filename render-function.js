@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-3cfb730f.js";/* empty css                      */const t=document.createElement("form"),e=document.createElement("input"),a=document.createElement("ul");e.type="text";e.name="search";e.placeholder="Enter search query...";t.appendChild(e);t.addEventListener("submit",r=>{if(r.preventDefault(),e.value.trim()===""){iziToast.show({title:"Error",message:"These fields are empty, please, fill these all!",color:"red"});return}a.insertAdjacentHTML=createMarkUp(data.hits)});
+//# sourceMappingURL=render-function.js.map
