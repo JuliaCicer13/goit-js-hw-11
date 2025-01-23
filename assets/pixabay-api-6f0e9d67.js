@@ -1,2 +1,0 @@
-const a="48269071-e04b626909c4b310c40a55ae0",o=t=>{const r=new URLSearchParams({key:"48269071-e04b626909c4b310c40a55ae0",image_type:"photo",orientation:"horizontal",safesearch:!0});return fetch(`https://pixabay.com/api/?key=${a}&q=${t}&${r}`).then(e=>{if(!e.ok)throw new Error("Network response was not ok");return e.json()}).then(e=>e.hits).catch(e=>{console.error("Ошибка:",e)})};export{o as f};
-//# sourceMappingURL=pixabay-api-6f0e9d67.js.map
