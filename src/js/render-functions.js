@@ -3,6 +3,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 export function createMarkUp(images) {
   const gallery = document.getElementById('gallery');
+  
   if (gallery) {
     gallery.innerHTML = ''; // Очищаем старую галерею
 

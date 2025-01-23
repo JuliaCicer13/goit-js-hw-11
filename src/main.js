@@ -73,6 +73,7 @@ form.addEventListener("submit", (event) => {
 
 
   } , 30000);
+  
   const searchValue = input.value.trim();
 
      if (!searchValue) {
@@ -83,34 +84,22 @@ form.addEventListener("submit", (event) => {
        return;
   };
    
-  
-
     fetchImages(searchValue)
-    .then(data => {
-      if (data.hits.length === 0) {
-          throw new Error('No images found');
-        }
-
-      
-      })
-     
       .then((data) => {
       
-
       // Дані від бекенда
-        if (!data || !data.hits ||data.hits.length === 0) {
+        if (!data.hits.length === 0) {
             iziToast.show({
               title: "Error",
               message: "Sorry, there are no any matching your search query. Please try again!",
               color: "red",
         })
-            return;
+      
        }
      const gallery =
      document.getElementById('gallery');
      gallery.innerHTML = ''; 
      gallery.append(photoList);
-     console.log("data", data);
      photoList.insertAdjacentHTML("beforeend", createMarkUp(data.hits));
      
 		})
