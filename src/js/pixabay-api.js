@@ -12,14 +12,14 @@ export function fetchImages () {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-       response.json();
+      
     })
     .then((data) => {
       
-      return data.hits; // Возвращаем данные для дальнейшей обработки
+      return response.json(data.hits); // Возвращаем данные для дальнейшей обработки
     })
     .catch((error) => {
-      console.error('Ошибка:', error);
+     return console.error('Ошибка:', error);
     });
 }
 
