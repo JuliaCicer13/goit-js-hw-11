@@ -75,7 +75,7 @@ form.addEventListener("submit", (event) => {
   } , 30000);
   const searchValue = input.value.trim();
 
-     if (searchValue === "") {
+     if (!searchValue) {
        iziToast.show({
          title: "Error",
          message: "These fields are empty, please, fill these all!",
@@ -87,7 +87,7 @@ form.addEventListener("submit", (event) => {
 
     fetchImages(searchValue)
     .then(data => {
-      if (!data || !data.hits || data.hits.length === 0) {
+      if (data.hits.length === 0) {
           throw new Error('No images found');
         }
 
