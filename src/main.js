@@ -68,11 +68,12 @@ form.addEventListener("submit", (event) => {
   // Показать индикатор
   loader.style.display = 'block';
 
+
   setTimeout(() => {
     loader.style.display = 'none';
 
 
-  } , 30000);
+  } , 3000);
   
   const searchValue = input.value.trim();
 
@@ -81,6 +82,8 @@ form.addEventListener("submit", (event) => {
          title: "Error",
          message: "These fields are empty, please, fill these all!",
        color: "red",})
+       loader.style.display = 'none';
+       
        return;
   };
    
@@ -103,10 +106,10 @@ form.addEventListener("submit", (event) => {
      photoList.insertAdjacentHTML("beforeend", createMarkUp(data.hits));
      
 		})
-     .finally(() => {
-       loader.style.display = 'none';
-    })
      .catch((error) =>
-       console.log(error));
+      console.log(error));
+    })
+     .finally(() => {
+      loader.style.display = 'none';
 });
 
